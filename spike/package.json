@@ -1,0 +1,36 @@
+{
+  "name": "andamio-ob3-prototype",
+  "version": "0.1.0",
+  "description": "Phase 1 spike: serialize an Andamio Cardano credential as a signed Open Badges 3.0 JSON-LD document",
+  "type": "module",
+  "scripts": {
+    "build": "tsc",
+    "generate": "node dist/generate.js",
+    "validate": "node dist/validate.js",
+    "verify": "node dist/verify.js",
+    "render": "node dist/render.js",
+    "inspect": "node dist/inspect.js",
+    "build-credential": "node dist/build.js",
+    "sign-di": "node dist/sign-di.js",
+    "all": "npm run build && npm run generate && npm run validate"
+  },
+  "dependencies": {
+    "@digitalbazaar/data-integrity": "^2.5.0",
+    "@digitalbazaar/ed25519-multikey": "^1.3.1",
+    "@digitalbazaar/eddsa-rdfc-2022-cryptosuite": "^1.1.0",
+    "@digitalbazaar/vc": "^7.1.0",
+    "@noble/ed25519": "^2.1.0",
+    "ajv": "^8.17.1",
+    "ajv-formats": "^3.0.1",
+    "dotenv": "^16.4.5",
+    "jose": "^5.9.6",
+    "jsonld": "^8.3.2"
+  },
+  "devDependencies": {
+    "@types/node": "^20.16.10",
+    "typescript": "^5.6.2"
+  },
+  "engines": {
+    "node": ">=20"
+  }
+}

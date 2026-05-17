@@ -1,0 +1,53 @@
+{
+  "_comment": "Per-policy human-readable metadata for Andamio mainnet credentials. Used by build-credential to populate OB 3.0 fields the chain does not carry. Add an entry per policyId as new samples are created.",
+
+  "3ed1bca6a9301a12a6787b22ffcac5a84867f8b2c4210dbf75347d65": {
+    "type": "course",
+    "title": "Getting Started at Gimbalabs",
+    "description": "An introduction to Gimbalabs as an organization, our learning model, and how to participate in our courses and projects.",
+    "issuerName": "Gimbalabs"
+  },
+  "ab5d9217bbbac409b3461a8bafe6daa4c0c6d4c5dac9b4f08bf3f5e9": {
+    "type": "course",
+    "title": "Getting Started with Andamio",
+    "description": "An introduction to Andamio: what it is, why it exists, and how it composes courses, projects, and credentials.",
+    "issuerName": "Andamio"
+  },
+  "203e63f457e0b8088073ec20959c4e0cc188cf90425d4f29ff3f817f": {
+    "type": "course",
+    "title": "Join Cardano XP",
+    "description": "The onboarding course for the Cardano XP contributor project. Prerequisite for joining the project itself.",
+    "issuerName": "Cardano XP"
+  },
+  "e473f1d6827b4b5d11c52b9b5e0e44e16a3a0a59f97e0a89c46b0c1d": {
+    "type": "course",
+    "title": "Aiken Project-Based Learning",
+    "description": "A project-based course on Aiken, Cardano's smart-contract language.",
+    "issuerName": "Gimbalabs"
+  },
+  "c478794581fb14b7c1ed90e2dfe05d8b27a0fbf2e2c7d34d9d3a4f1e": {
+    "type": "course",
+    "title": "Course Content Creator",
+    "description": "A course on how to author Andamio courses — SLT design, module structure, lesson types.",
+    "issuerName": "Andamio"
+  },
+  "6d6038a79aaca16bbf6cc8db8b1ef7fcfe60b4dfb31e887d8a8e8b3f": {
+    "type": "course",
+    "title": "Asteria Project Membership",
+    "description": "Vouching-pattern credential admitting a recipient to the Asteria project.",
+    "issuerName": "Asteria"
+  },
+
+  "674da142911c910d0f79e1c92cc6089e797b344fd9ded22ccb0a222e": {
+    "type": "project",
+    "title": "Sustain and Maintain Gimbalabs",
+    "description": "An ongoing Andamio project where contributors sustain Gimbalabs infrastructure, content, and community programs. Joining requires prior completion of Getting Started at Gimbalabs.",
+    "issuerName": "Gimbalabs"
+  },
+  "b3e1a8e2d8f6cd07580875b6beee0241d693387e75a63cceaf70faf7": {
+    "type": "project",
+    "title": "Cardano XP",
+    "description": "The Cardano XP contributor project — recipients earn XP for product feedback, contributions, and engagement on Cardano-adjacent work. Joining requires prior completion of the Join Cardano XP onboarding course.",
+    "issuerName": "Cardano XP"
+  }
+}

@@ -1,0 +1,129 @@
+{
+  "@context": [
+    "https://www.w3.org/ns/credentials/v2",
+    "https://purl.imsglobal.org/spec/ob/v3p0/context-3.0.3.json",
+    "https://credentials.andamio.io/context/v0.jsonld"
+  ],
+  "id": "urn:andamio:credential:b3e1a8e2d8f6cd07580875b6beee0241d693387e75a63cceaf70faf7:njuguna",
+  "type": [
+    "VerifiableCredential",
+    "OpenBadgeCredential"
+  ],
+  "issuer": {
+    "id": "did:key:z6MkiQ9g3F2xmRD99GuC863D4SVEpUPGiKXb5n6B24EtFbaa",
+    "type": [
+      "Profile"
+    ],
+    "name": "Cardano XP (on Cardano mainnet)",
+    "url": "https://credentials.andamio.io/issuer",
+    "description": "Andamio is an on-chain credential protocol on Cardano. The issuer DID in this sample is a throwaway did:key from the OB 3.0 spike — production credentials will use did:web:credentials.andamio.io or a per-org issuer DID."
+  },
+  "validFrom": "2026-04-08T21:50:36Z",
+  "name": "Joined: Cardano XP",
+  "description": "Real-recipient cross-issuer prerequisite chain on Andamio mainnet. Recipient is Njuguna (alias 'njuguna'), identified by his Andamio Access Token V2 (Scaffolding Era). His on-chain global state UTXO (held at the Andamio gnjuguna script address) records both the Join Cardano XP course completion AND admission to the Cardano XP contributor project — confirming the chain. The project's Plutus mint policy enforced the prerequisite at participation-token mint time.",
+  "credentialSubject": {
+    "id": "urn:andamio:recipient:njuguna",
+    "type": [
+      "AchievementSubject"
+    ],
+    "accessToken": {
+      "policyId": "ff5d0640b5a2717646d3f3151d100d57d194fdfa88cacf03f9edc568",
+      "userTokenAssetName": "756e6a7567756e61",
+      "userTokenAssetNameAscii": "unjuguna",
+      "globalStateAssetName": "676e6a7567756e61",
+      "globalStateAssetNameAscii": "gnjuguna",
+      "alias": "njuguna",
+      "era": "Scaffolding Era",
+      "name": "Andamio Access Token V2",
+      "image": "ipfs://bafybeiepxsxabwy723nr4uzokblmhzumwxstn7y7of4axdzj",
+      "appUrl": "https://api.andamio.io",
+      "userTokenHolder": "addr1q9zxp864enlra5tmgl6y32havq946njdxa7qd4gcxetj0seycr094w3r7jt7sp46j7t6gz8k6aljk40k46cjm5epvjzsj0dkpq",
+      "globalStateScriptAddress": "addr1xx2s29late2apgmhldvcj9klh9uak44zmhdr6kdayp0m27qgsfjccrtvrcams4nd63zs7wmtdgxp685ghdj46vxkkgsqfdfdtn",
+      "globalStateUtxo": "554700dc87378324f386cc06fbe5909545e42426352a77ed04c7ca5cbbe43616#1"
+    },
+    "achievement": {
+      "id": "urn:andamio:project:b3e1a8e2d8f6cd07580875b6beee0241d693387e75a63cceaf70faf7:5b57d48ff273864695ad42822eafb3cf424b0130aee2de7694c418898abb7c6c",
+      "type": [
+        "Achievement"
+      ],
+      "name": "Cardano XP",
+      "description": "The Cardano XP contributor project — recipients earn XP for product feedback, contributions, and engagement on Cardano-adjacent work. Joining requires prior completion of the Join Cardano XP onboarding course.",
+      "criteria": {
+        "narrative": "Recipient (a) holds an on-chain attestation for completing the Join Cardano XP course (policy 203e63f457e0b8088073ec20959c4e0cc188cf90425d4f29ff3f817f) — recorded in the gnjuguna global state datum with slt_hash d2c8d52ee92addcd51f536bd903213b9a363afa52868dfa2278590470751646d — and (b) is recorded as a participant in the Cardano XP contributor project (policy b3e1a8e2d8f6cd07580875b6beee0241d693387e75a63cceaf70faf7) with state_hash 5b57d48ff273864695ad42822eafb3cf424b0130aee2de7694c418898abb7c6c. Both attestations are entries in the recipient's Access Token global state map. The project's Plutus validator enforced the prerequisite course attestation at participation-token mint time."
+      },
+      "onChainAnchor": {
+        "network": "mainnet",
+        "type": "project-state",
+        "policyId": "b3e1a8e2d8f6cd07580875b6beee0241d693387e75a63cceaf70faf7",
+        "assetName": "4c6f63616c53746174654e4654",
+        "assetNameAscii": "LocalStateNFT",
+        "assetFingerprint": "asset1fl7sw29nmetgpngcqky5dfm9c43u53tzrm3jmx",
+        "creationTxHash": "b477ce4210dda7ec81e9a842c82706a18e8b692471252af4d49c2308d00a4b41",
+        "creationTime": "2026-04-08T21:50:36Z",
+        "explorerUrl": "https://cexplorer.io/policy/b3e1a8e2d8f6cd07580875b6beee0241d693387e75a63cceaf70faf7"
+      },
+      "onChainAttestation": {
+        "type": "global-state-entry",
+        "policyId": "b3e1a8e2d8f6cd07580875b6beee0241d693387e75a63cceaf70faf7",
+        "stateHash": "5b57d48ff273864695ad42822eafb3cf424b0130aee2de7694c418898abb7c6c",
+        "globalStateUtxo": "554700dc87378324f386cc06fbe5909545e42426352a77ed04c7ca5cbbe43616#1",
+        "globalStateDatumHash": "50a7676c7248ea6237e6afdaca2113fc9e991cc47cf34974f73abbc2e1d639d3",
+        "verification": "Read the gnjuguna UTXO datum at addr1xx2s29late2apgmhldvcj9klh9uak44zmhdr6kdayp0m27qgsfjccrtvrcams4nd63zs7wmtdgxp685ghdj46vxkkgsqfdfdtn; the Constr datum's map field will contain the entry { project_id: state_hash } shown above."
+      },
+      "requires": [
+        {
+          "achievementId": "urn:andamio:course:203e63f457e0b8088073ec20959c4e0cc188cf90425d4f29ff3f817f:d2c8d52ee92addcd51f536bd903213b9a363afa52868dfa2278590470751646d",
+          "enforcement": "mint-policy",
+          "policyReference": "https://cexplorer.io/policy/b3e1a8e2d8f6cd07580875b6beee0241d693387e75a63cceaf70faf7",
+          "rationale": "The Cardano XP project mint policy refuses to issue a participation token unless the recipient's Access Token global state map contains an attestation for Join Cardano XP. Enforcement happens at TX validation time, on-chain — a third party with chain access can independently verify the prerequisite was honored without trusting either issuer's database. The proof for this recipient: gnjuguna UTXO 554700dc...#1 datum's map contains { 203e63f457e0b8088073ec20959c4e0cc188cf90425d4f29ff3f817f → d2c8d52ee92addcd51f536bd903213b9a363afa52868dfa2278590470751646d }.",
+          "prereqAttestation": {
+            "policyId": "203e63f457e0b8088073ec20959c4e0cc188cf90425d4f29ff3f817f",
+            "sltHash": "d2c8d52ee92addcd51f536bd903213b9a363afa52868dfa2278590470751646d"
+          }
+        }
+      ]
+    }
+  },
+  "evidence": [
+    {
+      "id": "https://cexplorer.io/policy/b3e1a8e2d8f6cd07580875b6beee0241d693387e75a63cceaf70faf7",
+      "type": [
+        "Evidence"
+      ],
+      "name": "Cardano XP project policy on Cardano mainnet",
+      "description": "Public block explorer record of the project state policy. The Plutus minting policy referenced by this policy ID enforces the course-completion prerequisite at participation-token mint time."
+    },
+    {
+      "id": "https://cexplorer.io/policy/203e63f457e0b8088073ec20959c4e0cc188cf90425d4f29ff3f817f",
+      "type": [
+        "Evidence"
+      ],
+      "name": "Join Cardano XP course policy on Cardano mainnet",
+      "description": "Public block explorer record of the prerequisite course state policy."
+    },
+    {
+      "id": "https://cexplorer.io/asset/asset104q8uzr93z483axfpndeactw997u53s5rmuvu0",
+      "type": [
+        "Evidence"
+      ],
+      "name": "gnjuguna global state token",
+      "description": "Recipient's Access Token global state reference NFT. Held at the Andamio Access Token script address; its UTXO datum carries the credential map listing both the prerequisite and project attestations for this recipient."
+    },
+    {
+      "id": "https://cexplorer.io/asset/asset1j89k7hy069r3t88mhje2jfz7wd4uh22fe6crrf",
+      "type": [
+        "Evidence"
+      ],
+      "name": "unjuguna user token",
+      "description": "Recipient's Access Token user-held NFT. Identifies the recipient by alias 'njuguna' and pairs with gnjuguna as the global state reference."
+    }
+  ],
+  "proof": {
+    "type": "DataIntegrityProof",
+    "created": "2026-05-15T14:53:58Z",
+    "verificationMethod": "did:key:z6MkiQ9g3F2xmRD99GuC863D4SVEpUPGiKXb5n6B24EtFbaa#z6MkiQ9g3F2xmRD99GuC863D4SVEpUPGiKXb5n6B24EtFbaa",
+    "cryptosuite": "eddsa-rdfc-2022",
+    "proofPurpose": "assertionMethod",
+    "proofValue": "z25jH7fZnaEeDY5p9fv4Zu3cAEMGdrbwAi1p5e6PueBc4ePVeHiE4WQ1AedMnRYiM9hb658f9wHb7EWiFb3QtmRb4"
+  }
+}

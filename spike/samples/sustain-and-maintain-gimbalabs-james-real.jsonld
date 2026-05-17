@@ -1,0 +1,129 @@
+{
+  "@context": [
+    "https://www.w3.org/ns/credentials/v2",
+    "https://purl.imsglobal.org/spec/ob/v3p0/context-3.0.3.json",
+    "https://credentials.andamio.io/context/v0.jsonld"
+  ],
+  "id": "urn:andamio:credential:674da142911c910d0f79e1c92cc6089e797b344fd9ded22ccb0a222e:james",
+  "type": [
+    "VerifiableCredential",
+    "OpenBadgeCredential"
+  ],
+  "issuer": {
+    "id": "did:key:z6MkiQ9g3F2xmRD99GuC863D4SVEpUPGiKXb5n6B24EtFbaa",
+    "type": [
+      "Profile"
+    ],
+    "name": "Gimbalabs (on Cardano mainnet)",
+    "url": "https://credentials.andamio.io/issuer",
+    "description": "Andamio is an on-chain credential protocol on Cardano. The issuer DID in this sample is a throwaway did:key from the OB 3.0 spike — production credentials will use did:web:credentials.andamio.io or a per-org issuer DID."
+  },
+  "validFrom": "2026-02-12T08:11:34Z",
+  "name": "Joined: Sustain and Maintain Gimbalabs",
+  "description": "Real-recipient cross-issuer prerequisite chain on Andamio mainnet. Recipient is James (alias 'james'), identified by his Andamio Access Token V2 (Scaffolding Era). His on-chain global state UTXO (held at the Andamio gjames script address) records both the Getting Started at Gimbalabs course completion AND the Sustain and Maintain Gimbalabs project participation — confirming the chain. The project's Plutus mint policy enforced the prerequisite at participation-token mint time.",
+  "credentialSubject": {
+    "id": "urn:andamio:recipient:james",
+    "type": [
+      "AchievementSubject"
+    ],
+    "accessToken": {
+      "policyId": "ff5d0640b5a2717646d3f3151d100d57d194fdfa88cacf03f9edc568",
+      "userTokenAssetName": "756a616d6573",
+      "userTokenAssetNameAscii": "ujames",
+      "globalStateAssetName": "676a616d6573",
+      "globalStateAssetNameAscii": "gjames",
+      "alias": "james",
+      "era": "Scaffolding Era",
+      "name": "Andamio Access Token V2",
+      "image": "ipfs://bafybeiepxsxabwy723nr4uzokblmhzumwxstn7y7of4axdzj",
+      "appUrl": "https://api.andamio.io",
+      "userTokenHolder": "addr1qyvzwqruhzxec6xh0l5pfp0fnsacu3rn7ed30s2w0g68r6g7l7xc0hk00nqf2fzd653wfywdczld5he9dhpzqzde7wkq6sqed4",
+      "globalStateScriptAddress": "addr1xx2s29late2apgmhldvcj9klh9uak44zmhdr6kdayp0m27qgsfjccrtvrcams4nd63zs7wmtdgxp685ghdj46vxkkgsqfdfdtn",
+      "globalStateUtxo": "5cb4e1ca41c6b6af6b95b066b27c12f8575bf2ae26f6a8e749fb2bfe2a8f9a6d#1"
+    },
+    "achievement": {
+      "id": "urn:andamio:project:674da142911c910d0f79e1c92cc6089e797b344fd9ded22ccb0a222e:8ca2f04306093b0c13e2208aec7b07b0e829699470fd70b3acd2b24d4220781b",
+      "type": [
+        "Achievement"
+      ],
+      "name": "Sustain and Maintain Gimbalabs",
+      "description": "An ongoing Andamio project where contributors sustain Gimbalabs infrastructure, content, and community programs. Joining requires prior completion of Getting Started at Gimbalabs.",
+      "criteria": {
+        "narrative": "Recipient (a) holds an on-chain attestation for completing the Getting Started at Gimbalabs course (policy 3ed1bca6a9301a12a6787b22ffcac5a84867f8b2c4210dbf75347d65) — recorded in the gjames global state datum with slt_hash ac35904d0b06b1f3c673a06c86dd93d0fc2a94d113980d786593fdca75ce7e44 — and (b) is recorded as a participant in the Sustain and Maintain Gimbalabs project (policy 674da142911c910d0f79e1c92cc6089e797b344fd9ded22ccb0a222e) with state_hash 8ca2f04306093b0c13e2208aec7b07b0e829699470fd70b3acd2b24d4220781b. Both attestations are entries in the recipient's Access Token global state map. The project's Plutus validator enforced the prerequisite course attestation at participation-token mint time."
+      },
+      "onChainAnchor": {
+        "network": "mainnet",
+        "type": "project-state",
+        "policyId": "674da142911c910d0f79e1c92cc6089e797b344fd9ded22ccb0a222e",
+        "assetName": "4c6f63616c53746174654e4654",
+        "assetNameAscii": "LocalStateNFT",
+        "assetFingerprint": "asset1pjdc2zkj4da0gr2zgnpn4elv5e88253rss3fxk",
+        "creationTxHash": "70945cb0a68c5445b8bb33280271f4e1e362e6c4fe639cd23dbc4890648786a4",
+        "creationTime": "2026-02-12T08:11:34Z",
+        "explorerUrl": "https://cexplorer.io/policy/674da142911c910d0f79e1c92cc6089e797b344fd9ded22ccb0a222e"
+      },
+      "onChainAttestation": {
+        "type": "global-state-entry",
+        "policyId": "674da142911c910d0f79e1c92cc6089e797b344fd9ded22ccb0a222e",
+        "stateHash": "8ca2f04306093b0c13e2208aec7b07b0e829699470fd70b3acd2b24d4220781b",
+        "globalStateUtxo": "5cb4e1ca41c6b6af6b95b066b27c12f8575bf2ae26f6a8e749fb2bfe2a8f9a6d#1",
+        "globalStateDatumHash": "f9b915af8ea54cb0776df2d60a4adbade299605ac58dde8af8454d92821dd77e",
+        "verification": "Read the gjames UTXO datum at addr1xx2s29late2apgmhldvcj9klh9uak44zmhdr6kdayp0m27qgsfjccrtvrcams4nd63zs7wmtdgxp685ghdj46vxkkgsqfdfdtn; the Constr datum's map field will contain the entry { project_id: state_hash } shown above."
+      },
+      "requires": [
+        {
+          "achievementId": "urn:andamio:course:3ed1bca6a9301a12a6787b22ffcac5a84867f8b2c4210dbf75347d65:ac35904d0b06b1f3c673a06c86dd93d0fc2a94d113980d786593fdca75ce7e44",
+          "enforcement": "mint-policy",
+          "policyReference": "https://cexplorer.io/policy/674da142911c910d0f79e1c92cc6089e797b344fd9ded22ccb0a222e",
+          "rationale": "The Sustain and Maintain Gimbalabs project mint policy refuses to issue a participation token unless the recipient's Access Token global state map contains an attestation for Getting Started at Gimbalabs. Enforcement happens at TX validation time, on-chain — a third party with chain access can independently verify the prerequisite was honored without trusting either issuer's database. The proof for this recipient: gjames UTXO ec97e449...#1 datum's map contains { 3ed1bca6a9301a12a6787b22ffcac5a84867f8b2c4210dbf75347d65 → ac35904d0b06b1f3c673a06c86dd93d0fc2a94d113980d786593fdca75ce7e44 }.",
+          "prereqAttestation": {
+            "policyId": "3ed1bca6a9301a12a6787b22ffcac5a84867f8b2c4210dbf75347d65",
+            "sltHash": "ac35904d0b06b1f3c673a06c86dd93d0fc2a94d113980d786593fdca75ce7e44"
+          }
+        }
+      ]
+    }
+  },
+  "evidence": [
+    {
+      "id": "https://cexplorer.io/policy/674da142911c910d0f79e1c92cc6089e797b344fd9ded22ccb0a222e",
+      "type": [
+        "Evidence"
+      ],
+      "name": "Sustain and Maintain Gimbalabs project policy on Cardano mainnet",
+      "description": "Public block explorer record of the project state policy. The Plutus minting policy referenced by this policy ID enforces the course-completion prerequisite at participation-token mint time."
+    },
+    {
+      "id": "https://cexplorer.io/policy/3ed1bca6a9301a12a6787b22ffcac5a84867f8b2c4210dbf75347d65",
+      "type": [
+        "Evidence"
+      ],
+      "name": "Getting Started at Gimbalabs course policy on Cardano mainnet",
+      "description": "Public block explorer record of the prerequisite course state policy."
+    },
+    {
+      "id": "https://cexplorer.io/asset/asset1c4lnps4qkrvjuxqd04dgaw5efg7uf4atvcxx4s",
+      "type": [
+        "Evidence"
+      ],
+      "name": "gjames global state token",
+      "description": "Recipient's Access Token global state reference NFT. Held at the Andamio Access Token script address; its UTXO datum carries the credential map listing both the prerequisite and project attestations for this recipient."
+    },
+    {
+      "id": "https://cexplorer.io/asset/asset19062vjkf6tqwv43ha8ghaqe5zp7809h0xr39wy",
+      "type": [
+        "Evidence"
+      ],
+      "name": "ujames user token",
+      "description": "Recipient's Access Token user-held NFT. Identifies the recipient by alias 'james' and pairs with gjames as the global state reference."
+    }
+  ],
+  "proof": {
+    "type": "DataIntegrityProof",
+    "created": "2026-05-15T14:53:59Z",
+    "verificationMethod": "did:key:z6MkiQ9g3F2xmRD99GuC863D4SVEpUPGiKXb5n6B24EtFbaa#z6MkiQ9g3F2xmRD99GuC863D4SVEpUPGiKXb5n6B24EtFbaa",
+    "cryptosuite": "eddsa-rdfc-2022",
+    "proofPurpose": "assertionMethod",
+    "proofValue": "z2R3fFDRVX2VaTjcaTDDVAEorXLyxNe6RHZNWPUrAgnZeciZDDfuHCu9WSe84ujAnHosuKNqkKJKJNM8CngyPur75"
+  }
+}

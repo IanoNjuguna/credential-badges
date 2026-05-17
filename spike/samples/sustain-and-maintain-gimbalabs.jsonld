@@ -1,0 +1,65 @@
+{
+  "@context": [
+    "https://www.w3.org/ns/credentials/v2",
+    "https://purl.imsglobal.org/spec/ob/v3p0/context-3.0.3.json",
+    "https://credentials.andamio.io/context/v0.jsonld"
+  ],
+  "id": "urn:andamio:credential:674da142911c910d0f79e1c92cc6089e797b344fd9ded22ccb0a222e:sample-maya",
+  "type": ["VerifiableCredential", "OpenBadgeCredential"],
+  "issuer": {
+    "id": "did:key:z6MkpBE45BjpE8KiWo6nfn8HELrQ73yLCNmKRkMh2DL9WAqM",
+    "type": ["Profile"],
+    "name": "Gimbalabs (on Cardano mainnet)",
+    "url": "https://credentials.andamio.io/issuer",
+    "description": "Andamio is an on-chain credential protocol on Cardano. The issuer DID in this sample is a throwaway did:key from the OB 3.0 spike — production credentials will use did:web:credentials.andamio.io or a per-org issuer DID."
+  },
+  "validFrom": "2026-02-12T02:51:34Z",
+  "name": "Joined: Sustain and Maintain Gimbalabs",
+  "description": "Cross-issuer prerequisite chain demonstration on Andamio mainnet. The Sustain and Maintain Gimbalabs project requires completion of the Getting Started at Gimbalabs course; the project's Plutus mint policy enforces this at participation-token mint time. The recipient identifier in this sample is illustrative (sample-maya) — the on-chain anchors, policy IDs, and prerequisite enforcement are real.",
+  "credentialSubject": {
+    "id": "urn:andamio:recipient:sample-maya",
+    "type": ["AchievementSubject"],
+    "achievement": {
+      "id": "urn:andamio:project:674da142911c910d0f79e1c92cc6089e797b344fd9ded22ccb0a222e:0000000000000000000000000000000000000000000000000000000000000001",
+      "type": ["Achievement"],
+      "name": "Sustain and Maintain Gimbalabs",
+      "description": "An ongoing Andamio project where contributors sustain Gimbalabs infrastructure, content, and community programs. Joining requires prior completion of Getting Started at Gimbalabs.",
+      "criteria": {
+        "narrative": "Recipient (a) holds an on-chain attestation for completing the Getting Started at Gimbalabs course (policy 3ed1bca6a9301a12a6787b22ffcac5a84867f8b2c4210dbf75347d65), and (b) has been admitted to the Sustain and Maintain Gimbalabs project (policy 674da142911c910d0f79e1c92cc6089e797b344fd9ded22ccb0a222e). The project's Plutus validator checks the prerequisite course attestation at participation-token mint time — this is on-chain enforcement, not issuer claim."
+      },
+      "onChainAnchor": {
+        "network": "mainnet",
+        "type": "project-state",
+        "policyId": "674da142911c910d0f79e1c92cc6089e797b344fd9ded22ccb0a222e",
+        "assetName": "4c6f63616c53746174654e4654",
+        "assetNameAscii": "LocalStateNFT",
+        "assetFingerprint": "asset1pjdc2zkj4da0gr2zgnpn4elv5e88253rss3fxk",
+        "creationTxHash": "70945cb0a68c5445b8bb33280271f4e1e362e6c4fe639cd23dbc4890648786a4",
+        "creationTime": "2026-02-12T02:51:34Z",
+        "explorerUrl": "https://cexplorer.io/policy/674da142911c910d0f79e1c92cc6089e797b344fd9ded22ccb0a222e"
+      },
+      "requires": [
+        {
+          "achievementId": "urn:andamio:course:3ed1bca6a9301a12a6787b22ffcac5a84867f8b2c4210dbf75347d65:0000000000000000000000000000000000000000000000000000000000000002",
+          "enforcement": "mint-policy",
+          "policyReference": "https://cexplorer.io/policy/674da142911c910d0f79e1c92cc6089e797b344fd9ded22ccb0a222e",
+          "rationale": "The Sustain and Maintain Gimbalabs project mint policy refuses to issue a participation token unless the recipient's wallet holds an attestation for Getting Started at Gimbalabs. Enforcement happens at TX validation time, on-chain — a third party with chain access can independently verify the prerequisite was honored without trusting either issuer's database."
+        }
+      ]
+    }
+  },
+  "evidence": [
+    {
+      "id": "https://cexplorer.io/policy/674da142911c910d0f79e1c92cc6089e797b344fd9ded22ccb0a222e",
+      "type": ["Evidence"],
+      "name": "Sustain and Maintain Gimbalabs project policy on Cardano mainnet",
+      "description": "Public block explorer record of the project state policy. The Plutus minting policy referenced by this policy ID enforces the course-completion prerequisite at participation-token mint time."
+    },
+    {
+      "id": "https://cexplorer.io/policy/3ed1bca6a9301a12a6787b22ffcac5a84867f8b2c4210dbf75347d65",
+      "type": ["Evidence"],
+      "name": "Getting Started at Gimbalabs course policy on Cardano mainnet",
+      "description": "Public block explorer record of the prerequisite course state policy."
+    }
+  ]
+}
