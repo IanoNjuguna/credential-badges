@@ -57,6 +57,16 @@ For the full deploy mechanism, allowlist rule, and tag policy, see [`DEPLOY.md`]
 3. Push a version tag: `git tag v0.1.2 && git push origin v0.1.2`. GitHub Actions builds, pushes (SHA + semver tags, never `:latest`), and deploys. Artifact Registry has immutable tags — re-pushing an existing tag is rejected, so always bump.
 4. Verify `https://credentials.andamio.io/context/v0.jsonld` resolves with `Content-Type: application/ld+json` and is byte-identical to the repo copy.
 
+## Beyond the served files
+
+The repo also houses material that is **not** baked into the served image (the served-file allowlist in `Dockerfile` + `scripts/ci/check-allowlist.sh` enforces this):
+
+- `docs/plans/` — the OB 3.0 issuer deployment plan that will stand up a sibling Cloud Run service (`credential-badges-issuer`) at `credentials.andamio.io/credentials/*`.
+- `spike/` — the validated OB 3.0 prototype (TypeScript, end-to-end) the plan promotes from.
+- `spike/verifier-spike/` — the Phase 0 pre-flight verifier spike (2026-05-25, 1EdTech green; mapper findings folded into the plan).
+
+See [`MOC.md`](MOC.md) for a one-screen map of every component in this stack.
+
 ## Background
 
-These extension terms came out of the Andamio Open Badges 3.0 spike (April–May 2026). The full mapping and design rationale lives in the spike directory in the `andamio` orchestration vault.
+These extension terms came out of the Andamio Open Badges 3.0 spike (April–May 2026). The spike is committed at `spike/` in this repo (source of truth); the full deployment plan that promotes it lives at `docs/plans/2026-05-16-001-feat-andamio-ob3-issuer-deployment-plan.md`.
