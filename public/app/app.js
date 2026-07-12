@@ -95,4 +95,13 @@ document.addEventListener('DOMContentLoaded', () => {
 
   // Initial Render
   updatePreview();
+
+  // Mobile Menu Toggle
+  const mobileMenuBtn = document.getElementById('mobileMenuBtn');
+  const sidebar = document.querySelector('.sidebar');
+  if (mobileMenuBtn && sidebar) {
+    mobileMenuBtn.addEventListener('click', () => {
+      sidebar.classList.toggle('open');
+    });
+  }
 });
