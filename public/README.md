@@ -40,6 +40,7 @@ Here is exactly what was ported to the JavaScript generator and what was intenti
 
 ## Possibilities in the Future
 
-Despite these tradeoffs, running the generator in the browser opens up several possibilities:
+Despite these tradeoffs, it is possible to implement the Python generator:
+
 * **WASM Integration:** We could compile the Python generator to WebAssembly. This would allow the browser to generate the true, fully compliant, offline-ready OB3 SVG artifact instantly on the client side without needing a server.
 * **API Backend:** We could refactor this frontend to send its state to a lightweight Python backend API, displaying a fast preview via JS but utilizing the Python server to download the "Official" badge.
